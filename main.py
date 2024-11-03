@@ -1,8 +1,13 @@
 from core import Node # Ejemplo de uso
 from core import render
-import cv2
+import cv2,os 
 
 if __name__ == "__main__":
+    # creamos las carpetas si no estan creadas en img/input y img/output
+    if not os.path.exists('img/input'):
+        os.makedirs('img/input')
+    if not os.path.exists('img/output'):
+        os.makedirs('img/output')
     #imagen de fondo
     background_path = "img/input/calle.png"
     # Cargar la imagen de fondo
